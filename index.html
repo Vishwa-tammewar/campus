@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nagpur Engineering Colleges - Ultimate Campus Guide & Fresher Survival Portal for VNIT, RBU, YCCE, Raisoni, and IIIT Nagpur.">
+  <meta name="theme-color" content="#07090e">
+  <title>Nagpur Campus Guide & Fresher Survival Portal | VNIT • RBU • YCCE • Raisoni • IIITN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Ambient Glowing Orbs -->
+  <div class="bg-glow-orb-1" id="glowOrb1"></div>
+  <div class="bg-glow-orb-2" id="glowOrb2"></div>
+
+  <!-- ==========================================================================
+       Site Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          CampusPulse <span class="sub">Nagpur Survival HQ</span>
+        </div>
+      </a>
+
+      <!-- College Switcher Dropdown (Key Module 1) -->
+      <div class="college-picker-wrapper">
+        <span class="college-picker-label">College:</span>
+        <select id="collegeSelect" class="college-select" aria-label="Select Engineering College">
+          <option value="vnit" selected>VNIT Nagpur</option>
+          <option value="rbu">RBU (Ramdeobaba)</option>
+          <option value="ycce">YCCE (Hingna)</option>
+          <option value="raisoni">G H Raisoni (GHRCEM)</option>
+          <option value="iiitn">IIIT Nagpur</option>
+        </select>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#cafes" class="nav-link">Cafes & Hangouts</a></li>
+        <li><a href="#faculty" class="nav-link">Faculty Intel</a></li>
+        <li><a href="#projects" class="nav-link">Patents & Mentors</a></li>
+        <li><a href="#campusLife" class="nav-link">Fests & Hostels</a></li>
+        <li><a href="#placements" class="nav-link">Placements</a></li>
+        <li><a href="#pyqs" class="nav-link">PYQs</a></li>
+        <li><a href="#polls" class="nav-link">Live Polls</a></li>
+      </ul>
+
+      <!-- Action Utilities -->
+      <div class="nav-actions">
+        <!-- Bookmark / Toolkit Button -->
+        <button id="openToolkitBtn" class="btn-icon-glass" title="My Saved Survival Toolkit" aria-label="Open Saved Toolkit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+          </svg>
+          <span id="savedCountBadge" class="badge-counter" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Drawer Hamburger -->
+        <button id="mobileNavToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-glass-card" id="heroCard">
+          
+          <div class="hero-badge-row">
+            <span class="college-badge" id="heroBadge">NIT / Tier-1</span>
+            <span class="location-pill" id="heroLocation">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span id="heroLocationText">South Ambazari Road, Nagpur</span>
+            </span>
+            <span class="location-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Est. <span id="heroEst">1960</span>
+            </span>
+            <span class="location-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              Metro: <span id="heroMetro">Subhash Nagar (Orange Line)</span>
+            </span>
+          </div>
+
+          <h1 class="hero-title" id="heroTitle">VNIT Nagpur</h1>
+          <p class="hero-subtitle" id="heroTagline">Institute of National Importance • Central India's Premier Tech Campus</p>
+          <p class="hero-desc" id="heroOverview">
+            Spread across 215 acres of lush greenery in the heart of Nagpur, VNIT combines academic excellence, active technical clubs, and a vibrant cultural heritage highlighted by Aarohi, Central India's largest cultural fest.
+          </p>
+
+          <!-- Quick Access Navigation Pills -->
+          <div class="hero-quick-actions">
+            <a href="#cafes" class="btn-pill primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+              Explore Cafes
+            </a>
+            <a href="#faculty" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              Faculty Intel
+            </a>
+            <a href="#projects" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Patents & Mentors
+            </a>
+            <a href="#campusLife" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+              Fest Schedules
+            </a>
+            <a href="#placements" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              Placement Stats
+            </a>
+            <a href="#polls" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              Live Polls
+            </a>
+          </div>
+
+          <!-- Dynamic Key Stats Strip -->
+          <div class="stats-strip">
+            <div class="stat-item">
+              <span class="stat-value highlight" id="statHighestPackage">₹64.0 LPA</span>
+              <span class="stat-label">Highest Package</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="statAvgPackage">₹15.2 LPA</span>
+              <span class="stat-label">Average CTC</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="statPlacementRate">93%</span>
+              <span class="stat-label">Placement Rate</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="statAttendanceVibe" style="font-size: 1.15rem; font-weight: 700;">Grade Curve Relaxed</span>
+              <span class="stat-label">Attendance Policy Reality</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Search & Filter Hub
+         ========================================================================== -->
+    <section class="search-filter-section">
+      <div class="container">
+        <div class="search-glass-container">
+          <div class="search-input-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="globalSearchInput" placeholder="Instant Search: Type 'chai', 'LeetCode', 'Aarohi', 'patent', 'Dr. Sharma'..." aria-label="Search campus intel">
+          </div>
+          <div class="active-college-indicator">
+            <span class="indicator-dot"></span>
+            Filtering for: <strong id="currentCollegeTag" style="color: #fff; margin-left: 4px;">VNIT Nagpur</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 1: Cafes & Hangout Spots
+         ========================================================================== -->
+    <section class="module-section" id="cafes">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Student Hangout Guide</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+            Best Cafes & Addas Nearby
+          </h2>
+          <p class="section-desc">Handpicked, student-budget-friendly hangout spots, late-night tea tapris, artisan coffee joints, and discussion hubs around campus.</p>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="filter-tabs" id="cafeFilterTabs">
+          <button class="tab-btn active" data-filter="all">All Spots</button>
+          <button class="tab-btn" data-filter="Pocket Friendly">Pocket Friendly</button>
+          <button class="tab-btn" data-filter="Specialty Coffee">Artisan Coffee</button>
+          <button class="tab-btn" data-filter="Street Food">Nagpur Street Food</button>
+          <button class="tab-btn" data-filter="Wifi">Wi-Fi & Work</button>
+        </div>
+
+        <!-- Cafes Grid -->
+        <div class="cards-grid" id="cafesGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 2: Faculty Guide & Academic Intel
+         ========================================================================== -->
+    <section class="module-section" id="faculty">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Academic Survival Blueprint</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            Faculty Guide & Viva Intel
+          </h2>
+          <p class="section-desc">Honest, unvarnished reviews, department teaching styles, attendance policy real-talk, and secrets to surviving practical lab vivas.</p>
+        </div>
+
+        <!-- Attendance & Lab Survival Strip -->
+        <div class="intel-banner-grid">
+          <div class="intel-box">
+            <div class="intel-box-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              Attendance Reality Check
+            </div>
+            <p class="intel-box-text" id="facultyAttendanceIntel">
+              Loading attendance policy...
+            </p>
+          </div>
+
+          <div class="intel-box">
+            <div class="intel-box-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 11 12 14 22 4"></polyline>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+              Golden Viva & Lab Hack
+            </div>
+            <p class="intel-box-text" id="facultyLabSurvival">
+              Loading lab survival advice...
+            </p>
+          </div>
+        </div>
+
+        <!-- Faculty Insights Cards Grid -->
+        <div class="cards-grid" id="facultyGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 3: Senior Patent & Project Guidance
+         ========================================================================== -->
+    <section class="module-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Innovation & Research</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Patents, Major Projects & Senior Mentors
+          </h2>
+          <p class="section-desc">Everything juniors need to know about filing patents, getting published in Scopus/IEEE, and reaching out to 4th-year seniors for 1-on-1 mentorship.</p>
+        </div>
+
+        <!-- Patent Protocol & Publication Blueprint Layout -->
+        <div class="patent-guide-layout">
+          
+          <div class="patent-protocol-card">
+            <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              Campus Patent Filing Protocol
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted);">Step-by-step guideline approved by college IPR Cells:</p>
+            <ul class="protocol-step-list" id="patentProtocolList">
+              <!-- Injected via app.js -->
+            </ul>
+          </div>
+
+          <div class="publication-card">
+            <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              Research Paper Roadmap (IEEE / Scopus)
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;" id="publicationTipsText">
+              Loading publication tips...
+            </p>
+            
+            <div style="margin-top: 1.25rem; background: var(--bg-glass); padding: 1rem; border-radius: var(--border-radius-sm); border: 1px solid var(--border-glass);">
+              <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--accent-primary);">Golden Rule for 7th Sem Capstone:</span>
+              <p style="font-size: 0.85rem; color: #fff; margin-top: 0.25rem;">
+                Keep your Turnitin Plagiarism similarity under 12%. Don't pay for predatory journals; always verify conference ISSN and Scopus indexing status on scopus.com first.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mentors Directory Header -->
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Senior Mentor Directory
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Connect with final-year project leads, SIH winners, and patent holders who are ready to guide freshers.</p>
+        </div>
+
+        <!-- Mentors Grid -->
+        <div class="mentor-grid" id="mentorsGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 4: Campus Life, Events & Commute
+         ========================================================================== -->
+    <section class="module-section" id="campusLife">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Campus Culture & Outings</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Fests, Hostels & Nagpur Commute
+          </h2>
+          <p class="section-desc">Annual cultural nights, tech symposiums, hostel mess hacks, top weekend getaway spots, and metro transit routes.</p>
+        </div>
+
+        <!-- Fests Grid -->
+        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 1rem;">Annual College Fests & Highlights</h3>
+        <div class="fest-grid" id="festsGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Hostel Life & Weekend Trips Layout -->
+        <div class="hostel-life-grid">
+          
+          <div class="hostel-box">
+            <h3 style="font-size: 1.15rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Hostel & PG Survival Hacks
+            </h3>
+            <ul class="checklist-hacks" id="hostelHacksList">
+              <!-- Injected via app.js -->
+            </ul>
+          </div>
+
+          <div class="weekend-box">
+            <h3 style="font-size: 1.15rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Top Nagpur Outing Spots
+            </h3>
+            <div id="weekendSpotsList">
+              <!-- Injected via app.js -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Nagpur Metro & Commute Card -->
+        <div class="transit-feature-card">
+          <div class="transit-header">
+            <div>
+              <span class="line-tag">Daily Transit Guide</span>
+              <h3 style="font-size: 1.35rem; color: #fff; margin-top: 0.2rem;">Nagpur Metro & Campus Auto-Pooling</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.3rem;" id="campusCommuteTip">
+                Loading commute tip...
+              </p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 0.6rem 1rem; border-radius: var(--border-radius-pill); border: 1px solid var(--border-glass); font-size: 0.85rem; color: var(--accent-primary); font-weight: 600;">
+              ⚡ 30% Maha Metro Student Discount
+            </div>
+          </div>
+
+          <div class="metro-lines-grid" id="metroLinesGrid">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 5: Placement & Career Prep (Value Add)
+         ========================================================================== -->
+    <section class="module-section" id="placements">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Career Acceleration Hub</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            Placement Trends & Interview Prep
+          </h2>
+          <p class="section-desc">Company recruitment trends, Nagpur IT park ecosystem (MIHAN & Parsodi), aptitude prep roadmap, and interview frameworks.</p>
+        </div>
+
+        <!-- Placement KPI Strip -->
+        <div class="placement-kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-val" id="placementHighest">₹64.0 LPA</div>
+            <div class="kpi-lbl">Campus Highest Package</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-val" id="placementMedian">₹12.5 LPA</div>
+            <div class="kpi-lbl">Batch Median CTC</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-val" id="placementEcosystemTitle">MIHAN & Parsodi</div>
+            <div class="kpi-lbl">Nagpur Tech Park Hubs</div>
+          </div>
+        </div>
+
+        <!-- Year-wise Placement Trends Table -->
+        <div class="section-divider"></div>
+        <h3 class="subsection-title">Year-wise Placement Trends</h3>
+        <p class="subsection-desc">Historical placement performance across recent batches:</p>
+        <div class="table-glass-wrapper">
+          <table class="data-table" id="yearWisePlacementTable">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Total Offers</th>
+                <th>Highest CTC</th>
+                <th>Average CTC</th>
+                <th>Median CTC</th>
+                <th>Companies</th>
+              </tr>
+            </thead>
+            <tbody id="yearWisePlacementBody">
+              <!-- Injected via app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Company-wise Breakdown Table -->
+        <div class="section-divider"></div>
+        <h3 class="subsection-title">Company-wise Recruitment Breakdown</h3>
+        <p class="subsection-desc">Recent on-campus hiring details by top recruiters:</p>
+        <div class="table-glass-wrapper">
+          <table class="data-table" id="companyBreakdownTable">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>CTC Offered</th>
+                <th>Students Placed</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody id="companyBreakdownBody">
+              <!-- Injected via app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Branch-wise Stats -->
+        <div class="section-divider"></div>
+        <h3 class="subsection-title">Branch-wise Placement Summary</h3>
+        <div class="branch-stats-grid" id="branchStatsGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Recruiters Spotlight -->
+        <div class="section-divider"></div>
+        <div class="recruiters-box">
+          <h3 class="subsection-title" style="margin-bottom: 0.25rem;">Frequent Recruiter Roster</h3>
+          <p class="subsection-desc">Companies with regular on-campus, pool, and special dream placement drives:</p>
+          <div class="recruiters-pills" id="recruiterPillsContainer">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+        <!-- 4-Semester Placement Roadmap Timeline -->
+        <div class="section-divider"></div>
+        <h3 class="subsection-title">4th-Year Placement Prep Roadmap</h3>
+        <p class="subsection-desc">How to structure your semesters from 5th to 8th to crack dream tech and core offers:</p>
+        
+        <div class="timeline-roadmap" id="placementRoadmapTimeline">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 5B: PYQ Resources & Study Material
+         ========================================================================== -->
+    <section class="module-section" id="pyqs">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Exam Preparation Hub</span>
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            PYQ Papers & Study Resources
+          </h2>
+          <p class="section-desc">Subject-wise previous year question paper index, exam pattern insights, and curated study resource links for each department.</p>
+        </div>
+
+        <!-- PYQ Cards Grid -->
+        <h3 class="subsection-title">Previous Year Question Papers Index</h3>
+        <div class="cards-grid" id="pyqGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Study Resources Links -->
+        <div class="section-divider"></div>
+        <h3 class="subsection-title">Curated Study & Practice Resources</h3>
+        <p class="subsection-desc">Verified platforms, notes portals, and practice tools recommended by seniors:</p>
+        <div class="resource-categories-grid" id="studyResourcesGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MODULE 6: Interactive Polls & Selections (Extra Feature)
+         ========================================================================== -->
+    <section class="module-section" id="polls">
+      <div class="container">
+        
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-tag">Campus Sentiment & Trends</span>
+            <h2 class="section-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Live Student Polls & Trends
+            </h2>
+            <p class="section-desc">Cast your vote on canteen food, best fests, and toughest subjects. All votes are saved locally in your browser!</p>
+          </div>
+          <div>
+            <button id="suggestPollBtn" class="btn-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              Suggest a Campus Poll
+            </button>
+          </div>
+        </div>
+
+        <!-- Polls Grid -->
+        <div class="polls-grid" id="pollsGrid">
+          <!-- Injected via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Modals & Drawers
+       ========================================================================== -->
+
+  <!-- Saved Survival Toolkit Modal / Drawer -->
+  <div class="modal-overlay" id="toolkitModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeToolkitBtn" aria-label="Close Toolkit">✕</button>
+      <h3 class="modal-title">My Saved Survival Toolkit</h3>
+      <p class="modal-desc">Your personal bookmarks of cafes, faculty tips, and mentors saved in your browser storage.</p>
+      
+      <div id="savedItemsContainer" class="saved-items-list">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Senior Mentor Connect Modal -->
+  <div class="modal-overlay" id="mentorModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeMentorBtn" aria-label="Close Mentor Modal">✕</button>
+      <h3 class="modal-title" id="mentorModalName">Connect with Mentor</h3>
+      <p class="modal-desc" id="mentorModalSub">Send a project guidance query or patent consultation request.</p>
+      
+      <form id="mentorContactForm" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Your Name & Year:</label>
+          <input type="text" id="menteeName" required placeholder="e.g., Ayush (2nd Year B.Tech CSE)" style="width: 100%; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none;">
+        </div>
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Guidance Topic:</label>
+          <select id="menteeTopic" style="width: 100%; padding: 0.75rem; background: #111827; border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none;">
+            <option value="patent">Patent Drafting & IPR Procedure</option>
+            <option value="capstone">Final Year Capstone Project Review</option>
+            <option value="paper">IEEE / Scopus Paper Submission</option>
+            <option value="internship">Off-Campus Internship / Referral Advice</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Brief Query:</label>
+          <textarea id="menteeQuery" required rows="3" placeholder="Briefly describe your idea or question..." style="width: 100%; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none; font-family: inherit;"></textarea>
+        </div>
+        <button type="submit" class="btn-pill primary" style="justify-content: center; margin-top: 0.5rem;">
+          Dispatch Mentorship Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Suggest a Poll Modal -->
+  <div class="modal-overlay" id="suggestPollModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeSuggestPollBtn" aria-label="Close Suggestion">✕</button>
+      <h3 class="modal-title">Suggest a New Campus Poll</h3>
+      <p class="modal-desc">Create a trending question for students across VNIT, RBU, YCCE, Raisoni, and IIITN.</p>
+      
+      <form id="suggestPollForm" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Poll Question:</label>
+          <input type="text" id="pollQuestionInput" required placeholder="e.g. Best late night tea spot near Hingna?" style="width: 100%; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none;">
+        </div>
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Option 1:</label>
+          <input type="text" id="pollOpt1Input" required placeholder="e.g. Hingna T-Point Tapri" style="width: 100%; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none;">
+        </div>
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">Option 2:</label>
+          <input type="text" id="pollOpt2Input" required placeholder="e.g. Wanadongri Gate Cafe" style="width: 100%; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--border-radius-sm); color: #fff; outline: none;">
+        </div>
+        <button type="submit" class="btn-pill primary" style="justify-content: center; margin-top: 0.5rem;">
+          Publish Community Poll
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="brand-name">
+              CampusPulse <span class="sub">Nagpur Edition</span>
+            </div>
+          </div>
+          <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6;">
+            A student-driven survival handbook crafted by 4th-year seniors for incoming freshers across VNIT, RBU, YCCE, G H Raisoni, and IIIT Nagpur.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Colleges Covered</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="selectCollege('vnit')">VNIT Nagpur</a></li>
+            <li><a href="javascript:void(0)" onclick="selectCollege('rbu')">RBU (Ramdeobaba)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectCollege('ycce')">YCCE Hingna</a></li>
+            <li><a href="javascript:void(0)" onclick="selectCollege('raisoni')">G H Raisoni (GHRCEM)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectCollege('iiitn')">IIIT Nagpur</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Key Portals</h4>
+          <ul class="footer-links">
+            <li><a href="#cafes">Student Cafes & Hangouts</a></li>
+            <li><a href="#faculty">Faculty Intel & Viva Tips</a></li>
+            <li><a href="#projects">Patent & Research Blueprint</a></li>
+            <li><a href="#placements">Placement Prep Roadmap</a></li>
+            <li><a href="#polls">Live Community Voting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>GitHub Pages Ready</h4>
+          <div class="gh-pages-callout">
+            <p style="color: #fff; font-weight: 600; margin-bottom: 0.35rem;">🚀 Zero-Config Web App</p>
+            <p style="color: var(--text-muted); line-height: 1.4;">
+              Pure Vanilla HTML, CSS & JavaScript. Push to any GitHub repo and activate GitHub Pages for instant free live hosting.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 CampusPulse Nagpur. Built with Glassmorphism UI & Vanilla Web Standards.</div>
+        <div>Designed for Nagpur Engineering Students & Freshers.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
